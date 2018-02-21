@@ -1,0 +1,184 @@
+/* styleshiiit*/
+
+.body {
+    width: 100%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 15% 35% 35% 15%;
+    grid-template-rows: auto;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.video1 {
+    margin-top: -1%;
+    margin-left: -1%;
+    width: 100%;
+    grid-column: 1/5;
+    grid-row: 1/2;
+    overflow: hidden;
+}
+
+.intro {
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+
+.logo {
+    float: left;
+    height: 24%;
+    width: 12%;
+    min-height: 20%;
+    min-width: 12%;
+    padding: 8% 3% 0.5% 0.001%;
+}
+
+.tekst {
+    line-height: 2.2rem;
+    font-size: 1.2rem;
+    padding: 12% 0 12% 0;
+}
+
+.photo0 {
+    grid-column: 1/5;
+    grid-row: 7/8;
+    margin-left: -1%;
+}
+
+.container {
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+}
+
+.text-block {
+    position: absolute;
+    bottom: 15%;
+    right: 60%;
+    background-color: #675045;
+    opacity: 0.7;
+    color: white;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.tekstboks {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+}
+
+.second {
+    grid-column: 2/4;
+    grid-row: 4/5;
+}
+
+.photo1 {
+    grid-column: 1/5;
+    grid-row: 5/6;
+    max-height: 100%;
+    max-width: 100%;
+    margin-left: -1%;
+}
+
+.third {
+    grid-column: 2/4;
+    grid-row: 6/7;
+}
+
+.parallax {
+    grid-column: 1/5;
+    grid-row: 3/4;
+    /* The image used */
+    background-image: url("images/2.png");
+
+    /* Set a specific height */
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: -1%;
+}
+
+.fourth {
+    grid-column: 2/4;
+    grid-row: 8/9;
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+
+.animation {
+    grid-column: 1/5;
+    grid-row: 5/6;
+    animation-name: zoom;
+    animation-duration: 10000ms;
+    animation-iteration-count: infinite;
+    max-width: 100%;
+}
+
+.fifth {
+    grid-column: 2/4;
+    grid-row: 10/11;
+}
+
+.video2 {
+    grid-column: 1/5;
+    grid-row: 11/12;
+    margin-left: -1%;
+}
+
+.sixth {
+    grid-column: 2/4;
+    grid-row: 13/14;
+}
+
+.photo2 {
+    grid-column: 1/5;
+    grid-row: 9/10;
+    margin-left: -1%;
+}
+
+/*Iphone størrelse*/
+
+@media only screen and (max-width: 400px) {
+    [class*="body"] {
+        grid-template-columns: 5% 45% 45% 5%;
+    }
+    [class*="logo"] {
+        width: 13%;
+    }
+    [class*="tekst"] {
+        font-size: 0.8rem;
+    }
+    [class*="text-block"] {
+        bottom: 3%;
+        right: auto;
+    }
+    [class*="tekstboks"] {
+        font-size: 14px;
+    }
+    [class*="parallax"] {
+        min-height: 300px;
+    }
+
+}
+
+/*Ipad størrelse*/
+
+@media only screen and (max-width: 800px) {
+    [class*="logo"] {
+        width: 25%;
+    }
+    [class*="text-block"] {
+        bottom: 3%;
+        right: auto;
+    }
+}
